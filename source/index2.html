@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+  <script>
+    $(function() {
+      var code = ''
+      var br = '<br>'
+      var ind = '&nbsp;&nbsp;'
+      var x = 850
+      var y = 0
+      var width = 81
+      var height = 81
+      for (var number = 43; number <= 1000; number++) {
+        if (number % 6 != 0) {
+          x += 75
+          x += Math.random() * 10 - 5
+          code += '\"rock' +
+            number +
+            '\": {' +
+            br +
+            ind +
+            '\"x\": ' +
+            Math.round((x + (Math.random() * 200 - 100))) + ',' +
+            br +
+            ind +
+            '\"y\": ' +
+            Math.round((y + (Math.random() * 1000 - 500))) + ',' +
+            br +
+            ind +
+            '\"width\": ' +
+            Math.round((width + (Math.random() * 50))) + ',' +
+            br +
+            ind +
+            '\"height\": ' +
+            Math.round((height + (Math.random() * 50))) +
+            br +
+            '}'
+          if (number < 1000) {
+            code += ',' +
+              br
+          }
+        }
+      }
+      $('div').html(code)
+    })
+  </script>
+</head>
+<body>
+  <div></div></body>
