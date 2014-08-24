@@ -12,7 +12,7 @@ function main() {
     images.rock.src = 'rock.png'
   }
 
-  $('button').on('click', function() {
+  /*$('button').on('click', function() {
     $('canvas')[0].width = $(window).width()
     $('canvas')[0].height = $(window).height()
     ctx = $('canvas')[0].getContext('2d')
@@ -21,8 +21,8 @@ function main() {
     $('body').addClass('game')
     $('button, input').hide()
     game()
-  })
-  /*$('button').on('click', function() {
+  })*/
+  $('button').on('click', function() {
     var elem = $('body')[0]
     if (elem.requestFullscreen) {
       elem.requestFullscreen()
@@ -41,7 +41,7 @@ function main() {
     $('button').html('okay')
     $('button').off('click')
     $('button').on('click', start)
-  })*/
+  })
 
 }
 
